@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream: #FAF6F0;
+    --color-ivory: #FFFDF9;
+    --color-blush: #FAF1EF;
+    --color-espresso: #2A221D;
+  }
+
+  body {
+    background-color: #FFFDF9;
+    color: #2A221D;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FAF6F0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #DFB0A5;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B87263;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-espresso-900 text-ivory hover:bg-rose-brown hover:shadow-elevated active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-xs font-semibold tracking-widest uppercase transition-all duration-300 border border-espresso-800 text-espresso-900 hover:bg-espresso-900 hover:text-ivory active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-outline-blush {
+    @apply inline-flex items-center justify-center px-6 py-3 text-xs font-semibold tracking-wider uppercase transition-all duration-300 border border-blush-400 text-espresso-800 hover:bg-blush-100 hover:border-blush-500 active:scale-[0.98];
+  }
+
+  .btn-icon {
+    @apply relative p-2.5 rounded-full text-espresso-700 hover:text-espresso-950 hover:bg-blush-100/70 transition-colors duration-200;
+  }
+
+  .badge-count {
+    @apply absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 text-[10px] font-bold text-ivory bg-rose-brown rounded-full shadow-sm;
+  }
+
+  .luxury-glass {
+    @apply bg-ivory/85 backdrop-blur-md border border-blush-200/60 shadow-soft;
+  }
+}
+
+/* Custom styling for editorial italic accents */
+.editorial-italic {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+}
